@@ -1,0 +1,99 @@
+/* ===================================
+        feature css
+====================================== */
+.section-feature {
+    padding: 60px 0;
+    @media (max-width:991px) { padding: 35px 0; }
+    .container { max-width: 1350px; }
+    .sec-title {
+        max-width: 800px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        @media (max-width:991px) { margin-bottom: 30px; }
+    }
+    &__bg {
+        background-color: rgba($bg-color2-rgb, 0.6);
+        border-radius: 15px !important;
+        border: 2px solid rgba($primary-text-color-rgb, 0.15);
+        padding-top: 200px;
+        padding: 200px 24px 80px 24px;
+        overflow: hidden;
+        @media (max-width:991px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 130px 20px 45px 20px;
+        }
+        &:hover {
+            .section-feature__bgimg {
+                opacity: 0.3;
+                transform: translateY(-65px);
+            }
+            .section-feature__icon img {
+                opacity: 0.9;
+                transform: scale(0.95) rotate(70deg);
+            }
+        }
+    }
+    &__bgimg {
+        background-repeat: no-repeat;
+        opacity: 0.22;
+        transition: all 0.5s ease;
+        @media (max-width:991px) { background-position: center top; }
+    }
+    &__icon {
+        min-height: 100px;
+        width: 100px;
+        margin-bottom: 8px;
+        transition: all 0.5s ease;
+        img {
+            width: 100% !important;
+            transition: all 0.5s ease;
+        }
+    }
+    &__title {
+        font-size: $heading-size4;
+        line-height: 33px;
+        margin-bottom: 20px;
+        @media (max-width:1200px) {
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        a { @include borderHover; }
+    }
+    &__text {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 29px;
+        margin-bottom: 0;
+        @media (max-width:991px) {
+            font-size: 16px;
+            line-height: 25px;
+            text-align: center;
+        }
+    }
+
+    &--two {
+        .section-feature__bg {
+            border-width: 1px;
+            padding: 24px 16px 16px 16px;
+        }
+        .section-feature__image {
+            width: 100%;
+            margin-bottom: 64px;
+            img {
+                width: 100% !important;
+                min-height: 200px;
+                max-height: 200px;
+                object-fit: contain;
+                margin: 0 auto;
+            }
+        }
+        .section-feature__info {
+            background-color: rgba($bg-color2-rgb, 0.5);
+            padding: 40px 25px;
+        }
+    }
+}

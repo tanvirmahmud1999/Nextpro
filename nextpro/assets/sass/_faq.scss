@@ -1,0 +1,114 @@
+/* ===================================
+        faq css
+====================================== */
+.section-faq {
+    overflow: hidden;
+    padding: 60px 0;
+    @media (max-width:991px) { padding: 35px 0; }
+    .container { max-width: 900px; }
+
+    .sec-title {
+        max-width: 720px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        &__title { margin-bottom: 25px; }
+    }
+    &__row {
+        background-color: rgba($primary-color-rgb, 0.05);
+        border-radius: 15px;
+        &.active {
+            .section-faq__title::after { content: '\f068'; }
+            .section-faq__title { color: $primary-color; }
+        }
+    }
+    &__row + &__row { margin-top: 20px; }
+    &__title {
+        font-weight: 600;
+        margin-bottom: 0;
+        font-size: $heading-size5;
+        line-height: 28px;
+        padding: 30px 35px;
+        padding-right: 60px;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s ease;
+        &:hover {
+            color: $primary-color;
+        }
+        &::after {
+            font-family:var(--fa-style-family,"Font Awesome 6 Free");
+            font-family: "Font Awesome 6 Pro";
+            content: '\2b';
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            right: 30px;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            color: $primary-text-color;
+            font-size: 25px;
+            line-height: 1;
+            @media (max-width:991px) { right: 20px; }
+        }
+        @media (max-width:991px) {
+            padding: 16px 20px;
+            padding-right: 50px;
+        }
+    }
+    &__content {
+        display: none;
+        padding: 0 30px 18px 35px;
+        @media (max-width:991px) { padding: 0 20px 18px 20px; }
+    }
+    &__text {
+        color: $primary-text-color;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        @media (max-width:991px) {
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+    &__list {
+        margin-bottom: 16px;
+        padding-left: 12px;
+        li {
+            color: $primary-text-color;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            position: relative;
+            padding-left: 18px;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                top: 9px;
+                left: 0;
+                z-index: 1;
+                background-color: rgba($primary-color-rgb, 0.5);
+            }
+            @media (max-width:991px) {
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+        li + li { margin-top: 11px; }
+    }
+    &--three {
+        overflow: initial;
+        .container { max-width: 1350px; }
+        .section-faq__title-wrap {
+            transition: all 0.5s ease;
+            @media (max-width:991px) { padding-bottom: 34px; }
+        }
+    }
+}
+
+[data-bs-theme="dark"] {
+    .section-faq__row { background-color: $bg-color2; }
+}

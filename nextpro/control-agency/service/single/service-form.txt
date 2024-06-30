@@ -1,0 +1,40 @@
+<div id="contactForm">
+    <div class="form-row d-flex flex-wrap">
+        <div class="form-group col-sm-6">
+        [text* yourname class:form-control placeholder "Your Name"]            
+        </div>        
+        <div class="form-group col-sm-6">
+            [email* youremail class:form-control placeholder "Your Email"]
+        </div>
+    </div>
+    <div class="form-row d-flex flex-wrap">
+        <div class="form-group col-sm-6">
+            [url website class:form-control placeholder "Your website"]
+        </div>
+
+        <div class="form-group col-sm-6">
+            [select* service class:custom_selected class:form-control include_blank "Select a Service" "Search Engine Optimization" "Social Media Marketing"]
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            [textarea* message class:form-control class:text-area placeholder "Message"]
+        </div>
+    </div>    
+    <button type="submit" class="next-marketing-btn form-btn btn">Send request</button>
+</div>
+
+
+
+
+
+// Mail settings
+From: [yourname] [youremail]
+Subject: [service]
+
+Message Body:
+[website]
+[message]
+
+-- 
+This is a notification that a contact form was submitted on your website ([_site_title] [_site_url]).

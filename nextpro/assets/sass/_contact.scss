@@ -1,0 +1,33 @@
+/* ===================================
+        contact css
+====================================== */
+.section-contact {
+    padding: 60px 0;
+    @media (max-width:991px) { padding: 35px 0; }
+    .container { max-width: 1656px; }
+    .sec-title {
+        max-width: 856px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    .section-team__wrap {
+        @media (max-width:1200px) {
+            padding: 0 15px;
+            padding-bottom: 42px;
+        }
+    }
+    &__address {
+        li {
+            strong { font-weight: 600; }
+        }
+    }
+    .footer__socialwrap {
+        margin-top: 22px;
+        li { color: $body-text-color; }
+    }
+}
+#map {
+    height: 510px;
+    border-radius: 30px;
+    margin-bottom: 55px;
+}

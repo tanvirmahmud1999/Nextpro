@@ -1,0 +1,25 @@
+<svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.75443 5.66614C-0.584815 8.01317 -0.584809 11.8185 1.75444 14.1655L16.9366 29.3983C17.0996 29.6133 17.2788 29.8197 17.4745 30.016L21.3674 33.9219C23.7066 36.2689 27.4993 36.2689 29.8385 33.9219L49.1865 14.5095C51.5258 12.1625 51.5258 8.35716 49.1865 6.01012L45.2936 2.10426C42.9544 -0.242777 39.1617 -0.242772 36.8224 2.10426L25.6419 13.322L14.1185 1.76028C11.7792 -0.586759 7.98658 -0.58676 5.64733 1.76028L1.75443 5.66614Z" fill="url(#paint0_linear_351_1720)"/>
+<g filter="url(#filter0_bi_351_1720)">
+<ellipse cx="25.3883" cy="34.0028" rx="16.4171" ry="16.4718" fill="#BCE4F1" fill-opacity="0.5"/>
+</g>
+<path d="M24.7186 26.3057L22.6404 30.5721L17.9406 31.2458C17.1093 31.3741 16.7896 32.4006 17.397 33.0101L20.7541 36.3141L19.9548 40.9655C19.8269 41.7996 20.7221 42.4411 21.4575 42.0562L25.6458 39.8428L29.8022 42.0562C30.5375 42.4411 31.4327 41.7996 31.3048 40.9655L30.5055 36.3141L33.8626 33.0101C34.4701 32.4006 34.1503 31.3741 33.3191 31.2458L28.6512 30.5721L26.541 26.3057C26.1893 25.5679 25.1023 25.5358 24.7186 26.3057Z" fill="white"/>
+<defs>
+<filter id="filter0_bi_351_1720" x="4.97119" y="13.531" width="40.8345" height="40.9436" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="2"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_351_1720"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_351_1720" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="0.2" dy="0.1"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0"/>
+<feBlend mode="normal" in2="shape" result="effect2_innerShadow_351_1720"/>
+</filter>
+<linearGradient id="paint0_linear_351_1720" x1="3.45362" y1="10.8861" x2="48.3634" y2="4.77994" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2E4DFE"/>
+<stop offset="1" stop-color="#0085FF"/>
+</linearGradient>
+</defs>
+</svg>

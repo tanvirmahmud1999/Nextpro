@@ -1,0 +1,171 @@
+/* ===================================
+        process css
+====================================== */
+.section-process {
+    overflow: hidden;
+    padding: 60px 0;
+    @media (max-width:991px) { padding: 35px 0; }
+    .container { max-width: 1350px; }
+    &__image {
+        min-height: 860px;
+        margin-right: 15px;
+        @media (max-width:991px) {
+            min-width:initial;
+            width:100%;
+            border-radius: 30px;
+            overflow: hidden;
+            margin-bottom: 48px;
+            min-height: initial;
+            margin-right: 0;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 68px;
+            left: 0;
+            width: 100%;
+            height: 607px;
+            border-radius: 30px;
+            background-color: $bg-color2;
+            z-index: 1;
+            @media (max-width:1200px) { height: 500px; }
+            @media (max-width:1023px) {
+                height: 100%;
+                top: 42px;
+            }
+        }
+    }
+    &__rocketimg {
+        position: absolute;
+        width: 100%;
+        max-width: 330px;
+        top: -3px;
+        left: 0;
+        z-index: 3;
+        animation: rocketEffect 1.1s infinite alternate;
+        @keyframes rocketEffect {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-16px);
+            }
+        }
+        @media (max-width:1200px) { max-width: 260px; }
+        @media (max-width:1023px) {
+            max-width: 200px;
+            top: 8px;
+
+        }
+        img { width: 100% !important; }
+    }
+    &__laptop {
+        position: absolute;
+        width: 100%;
+        top: 64px;
+        left: 0;
+        z-index: 2;
+        max-width: 582px;
+        @media (max-width:1023px) {
+            position: relative;
+            top: 10px;
+        }
+        img { width: 100% !important; object-fit: cover; }
+    }
+    &__storage {
+        position: absolute;
+        width: 100%;
+        top: 455px;
+        right: 0;
+        z-index: 2;
+        max-width: 362px;
+        animation: storageEffect 1.1s infinite alternate;
+        @keyframes storageEffect {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-15px);
+            }
+        }
+        @media (max-width:1200px) {
+            max-width: 280px;
+            top: 400px;
+        }
+        @media (max-width:1023px) { display: none; }
+        img { width: 100% !important; }
+    }
+
+    &__content {
+        padding-left: 10px;
+        @media (max-width:991px) { padding-left: 0; }
+    }
+    .sec-title {
+        margin-bottom: 48px;
+        @media (max-width:991px) { margin-bottom: 38px; }
+    }
+    &__row {
+        &:hover {
+            .section-process__icon {background-color: rgba($primary-color-rgb, 0.25);}
+        }
+    }
+    &__row + &__row {
+        margin-top: 30px;
+        @media (max-width:991px) { margin-top: 18px; }
+    }
+
+    &__icon {
+        width: 85px;
+        min-width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        background-color: rgba($bg-color2-rgb, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: transparent;
+        transition: all 0.4s;
+        @include svgIcon;
+        fill: $primary-color;
+        font-size: 30px;
+        @media (max-width:991px) {
+            width: 60px;
+            min-width: 60px;
+            height: 60px;
+            font-size: 22px;
+        }
+        svg { fill: transparent; }
+    }
+    &__info {
+        padding-left: 32px;
+        @media (max-width:991px) { padding-left: 16px; }
+    }
+    &__heading {
+        font-size: $heading-size4;
+        line-height: 33px;
+        margin-bottom: 0;
+        a { @include borderHover; }
+        @media (max-width:991px) {
+            font-size: 17px;
+            line-height: 23px;
+        }
+    }
+    &__text {
+        font-size: 18px;
+        font-weight: 400;
+        line-height:28.8px;
+        margin-bottom: 0;
+        @media (max-width:991px) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
+
+[data-bs-theme="dark"] {
+    .section-progress-stories__experience-year,
+    .section-progress-stories__experience-text {
+        color: $primary-text-color;
+        border-color: $primary-text-color;
+    }
+}

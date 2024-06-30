@@ -1,0 +1,90 @@
+/*
+Template Name: NextPro
+Template URI: https://themeperch.net/html/nextpro/
+Author: Themeperch
+Author URI: https://themeforest.net/user/themeperch
+Description: NextPro - NextPro is a modern HTML Template there features General Marketing, Social Media Marketing, AI in Marketing, Paid Advertising, Video Marketing, Analytics and Reporting, Industry news & Trends, E-commerce Marketing
+Version: 1.0.0
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+1. Body
+2. Header 
+3. Topbar
+4. Navigation
+5. Approach
+6. Blog
+7. Client-logo
+8. Contact
+10. Dashboard
+11. Faq
+12. Feature
+13. Why-choose
+14. Form
+15. Funfact
+16. Header-sidebar
+17. Hero
+18. Jobs
+19. Mobile-menu
+20. Newsletter
+21. Not-found
+22. Our-story
+23. portfolio
+24. Price
+25. Process
+26. Progress
+27. Provide
+28. Rating
+29. Request-form
+30. Services
+31. Sidebar
+32. Solution
+33. Strategy
+34. Study
+35. Team
+36. Testimonial
+37. Footer
+-------------------------------------------------------------------*/
+
+// variables
+@import "utility/mixins";
+@import "utility/button";
+@import "variables/var";
+@import "variables/font";
+@import "common";
+@import "form";
+@import "topbar";
+@import "navigation";
+@import "header-sidebar";
+@import "mobile-menu";
+@import "hero";
+@import "client-logo";
+@import "our-story";
+@import "services";
+@import "provide";
+@import "process";
+@import "dashboard";
+@import "strategy";
+@import "price-sec";
+@import "blog-one";
+@import "newsletter";
+@import "testimonial";
+@import "solution";
+@import "faq";
+@import "rating";
+@import "team";
+@import "study";
+@import "request-form";
+@import "feature";
+@import "approach";
+@import "funfact";
+@import "why-choose";
+@import "progress-stories";
+@import "sidebar";
+@import "jobs";
+@import "portfolio";
+@import "contact";
+@import "not-found";
+@import "footer";
+
+@import "landing-page";

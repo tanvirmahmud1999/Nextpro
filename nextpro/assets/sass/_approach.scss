@@ -1,0 +1,150 @@
+/* ===================================
+        Approach css
+====================================== */
+.section-approach {
+    padding: 60px 0;
+    padding-bottom: 50px;
+    @media (max-width:991px) {
+        padding: 35px 0;
+        padding-bottom: 20px;
+    }
+    .container { max-width: 1350px; }
+    .sec-title {
+        max-width: 900px;
+        margin: 0 auto;
+        margin-bottom: 78px;
+    }
+    &__facilities {
+        gap: 20px;
+        padding-bottom: 20px;
+        &__col {
+            width: calc(calc(100% - 80px) / 5);
+            background-color: rgba($bg-color2-rgb, 0.5);
+            border-radius: 10px;
+            padding: 16px 25px;
+            transition: all 0.5s ease;
+            @media (max-width:1279px) { width: calc(calc(100% - 40px) / 3); }
+            @media (max-width:991px) { width: calc(calc(100% - 0px) / 1); }
+            &:hover {
+                background-color: $primary-color;
+                .section-approach__facilities__icon img { filter: brightness(0) invert(1); }
+                .section-approach__facilities__title { color: $body-color; }
+            }
+        }
+        &__icon {
+            img {
+                width:  auto !important;
+                transition: all 0.5s ease;
+            }
+        }
+        &__titlewrap { padding-left: 23px; }
+        &__title {
+            font-size: $heading-size5;
+            font-weight: 600;
+            line-height: 29px;
+            margin-bottom: 0;
+            color: $body-text-color;
+            transition: all 0.5s ease;
+            @media (max-width:1279px) {
+                br { display: none; }
+            }
+        }
+    }
+
+    &__content-bg {
+        background-color: rgba($bg-color2-rgb, 0.5);
+        border-radius: 30px;
+        padding: 30px;
+        padding-left: 82px;
+        position: relative;
+        overflow: hidden;
+        @media (max-width:1279px) { padding-left: 30px; }
+        @media (max-width:991px) { padding: 20px; }
+    }
+    &__left {
+        width: 100%;
+        max-width: 585px;
+        @media (max-width:991px) {
+            max-width: initial;
+            padding-bottom: 45px;
+        }
+    }
+    &__title {
+        font-size: $heading-size3;
+        line-height: 50px;
+        margin-bottom: 20px;
+        @media (max-width:991px) {
+            font-size: 28px;
+            line-height: 34px;
+            margin-bottom: 16px;
+        }
+    }
+    &__text {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 29px;
+        margin-bottom: 32px;
+        @media (max-width:991px) {
+            font-size: 16px;
+            line-height: 25px;
+            margin-bottom: 22px;
+        }
+    }
+    &__btn {
+        padding-left: 34px;
+        padding-right: 34px;
+    }
+    &__image {
+        width: 100%;
+        max-width: 540px;
+        margin-left: auto;
+        @media (max-width:991px) {
+            max-width: initial;
+            margin-left: 0;
+        }
+        img {
+            width: 100% !important;
+            border-radius: 20px;
+            object-fit: cover;
+            @media (max-width:991px) { border-radius: 15px; }
+        }
+    }
+    .tab-item {
+        cursor: pointer;
+        &.tab-active {
+            background-color: $primary-color;
+            .section-approach__facilities__icon {
+                img { filter: brightness(0) invert(1); }
+            }
+            .section-approach__facilities__title { color: $body-color; }
+        }
+    }
+    .tab-content {
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 1.3s ease, opacity 0.5s ease, visibility 0.5s ease;
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 0;
+        transform: translateY(80px);
+        &.content-active {
+            position: relative;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0px);
+        }
+    }
+}
+
+[data-bs-theme="dark"] {
+    .section-approach__facilities__col {
+        &:hover {
+            .section-approach__facilities__title { color: $primary-text-color; }
+        }
+    }
+}

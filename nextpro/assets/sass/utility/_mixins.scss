@@ -1,0 +1,77 @@
+@mixin devices ($breakpoint) {
+	@if $breakpoint==sm {
+		@media (min-width: 576px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==md {
+		@media (min-width: 768px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==lg {
+		@media (min-width: 992px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint==xl {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	}
+}
+
+
+@mixin reset-btn {
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+
+@mixin subnav-anchor {
+	color: $primary-text-color;
+	font-weight: 500;
+	transition: all 500ms ease;
+	display: block;
+	padding: 7px 20px;
+	font-size: 16px;
+
+	&:hover {
+		background-color: $primary-text-colore;
+		color: $body-color;
+	}
+}
+
+@mixin subnav-ul {
+	position: absolute;
+	min-width: 220px;
+	background-color: $body-color;
+	opacity: 0;
+	visibility: hidden;
+	transition: 500ms ease;
+	z-index: 99;
+	box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.1);
+}
+
+@mixin borderHover {
+	background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+	transition: all 500ms ease;
+
+	&:hover {
+		background-size: 100% 1px;
+	}
+}
+
+@function toRGB ($color) {
+	@return red($color)+", "+green($color)+", "+blue($color);
+}
+@mixin svgIcon() {
+	svg {
+		// width: 1em;
+		// height: 1em;
+		fill: currentColor;
+	}
+}

@@ -1,0 +1,111 @@
+/* ===================================
+        strategy css
+====================================== */
+.section-strategy {
+    overflow: hidden;
+    padding: 60px 0;
+    @media (max-width:991px) { padding: 35px 0; }
+    .container { max-width: 1350px; }
+    .sec-title {
+        margin-bottom: 50px;
+        @media (max-width:991px) { margin-bottom: 35px; }
+    }
+    &__imgwrap {
+        margin-right: 25px;
+        @media (max-width:1200px) { margin-right: 0; }
+        img {
+            width: 100% !important;
+        }
+    }
+
+    &__dots {
+        max-width: 232px;
+        padding-top: 272px;
+        @media (max-width:1200px) { padding-top: 220px; }
+        @media (max-width:991px) { display: none; }
+
+    }
+    &__img1,
+    &__img2,
+    &__img3,
+    &__img4 {
+        position: absolute;
+        width: 100%;
+        img {
+            width: 100% !important;
+            border-radius: 30px !important;
+            object-fit: cover;
+            @media (max-width:991px) { height: 100%; }
+        }
+    }
+    &__img1 {
+        top: 0;
+        left: 0;
+        z-index: 2;
+        padding-right: 50px;
+        max-width: 515px;
+        @media (max-width:1200px) { max-width: 100%; }
+        @media (max-width:991px) { position: static; }
+    }
+    &__img2 {
+        top: 0;
+        right: 0;
+        z-index: 3;
+        padding-top: 105px;
+        padding-left: 50px;
+        max-width: 355px;
+        @media (max-width:1200px) {
+            max-width: 100%;
+            padding-top: 90px;
+            padding-left: 80px;
+        }
+        @media (max-width:991px) {
+            padding-left: 90px;
+            padding-top: 100px;
+        }
+        img { border: 10px solid $body-color; }
+    }
+    &__img3 {
+        bottom: 0;
+        left: 0;
+        z-index: 4;
+        img {
+            border: 10px solid $body-color;
+            max-width: 229px;
+            display: block;
+            margin: 0 auto;
+            @media (max-width:991px) {
+                margin: 0;
+                display: none;
+            }
+        }
+    }
+    &__img4 {
+        top: 254px;
+        left: 0;
+        margin: auto;
+        z-index: 1;
+        padding-left: 46px;
+        img {
+            max-width: 232px;
+            border-radius: 0 !important;
+        }
+    }
+    
+    .section-provide__text2 { margin-bottom: 0; }
+    &__content {
+        padding-left: 20px;
+        @media (max-width:991px) {
+            padding-left: 0;
+        }
+    }
+    &--two {
+        .section-strategy__btn { margin-top: 42px; }
+    }
+}
+.dark { display: none; }
+
+[data-bs-theme="dark"] {
+    .light { display: none;}
+    .dark { display: block; }
+}

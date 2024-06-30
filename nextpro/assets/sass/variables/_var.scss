@@ -1,0 +1,217 @@
+/* ===================================
+        fonts, colors variable
+====================================== */
+:root,
+[data-bs-theme="light"] {
+	--nextpro-font: 'Plus Jakarta Sans', sans-serif;
+	--nextpro-font2: 'Inter', sans-serif;
+	--nextpro-heading-font: 'Plus Jakarta Sans', sans-serif;
+	--nextpro-special-font: 'DM Sans', sans-serif;
+
+	--body-color: #fff;
+	--body-color-rgb: #{toRGB(#fff)};
+	--body-text-color: #5C6671;
+	--body-text-color-rgb: #{toRGB(#5C6671)};
+	--primary-text-color: #001F3F;
+	--primary-text-color-rgb: #{toRGB(#001F3F)};
+
+	// btn color
+	--primary-color: #2E4DFE;
+	--primary-color-rgb: #{toRGB(#2E4DFE)};
+	--secondary-color: #6495ED;
+	--secondary-color-rgb: #{toRGB(#6495ED)};
+
+	// icon color
+	--icon-color: #C0C0C0;
+	--icon-color-rgb: #{toRGB(#C0C0C0)};
+	--star-color:#F4C82A;
+	--star-color-rgb:var(--star-color-rgb, #{toRGB(#F4C82A)});
+	--star-color2:#FEA500;
+	--star-color2-rgb:var(--star-color2-rgb, #{toRGB(#FEA500)});
+
+	// background color
+	--bg-color: #001F3F;
+	--bg-color-rgb: #{toRGB(#001F3F)};
+	--bg-color2: #E2E7FF;
+	--bg-color2-rgb: #{toRGB(#E2E7FF)};
+	--bg-color3: #F2F4FB;
+	--bg-color3-rgb: #{toRGB(#F2F4FB)};
+	--bg-color-green: #32A552;
+	--bg-color-green-rgb: #{toRGB(#32A552)};
+	--bg-color-purple: #A22EFE;
+	--bg-color-purple-rgb: #{toRGB(#A22EFE)};
+	--bg-color-red: #FE2E2E;
+	--bg-color-red-rgb: #{toRGB(#FE2E2E)};
+}
+
+// dark mode color
+[data-bs-theme="dark"] {
+	--body-color: #191F25;
+	--body-color-rgb: #{toRGB(#191F25)};
+	--body-text-color: #717A83;
+	--body-text-color-rgb: #{toRGB(#717A83)};
+	--primary-text-color: #CAD4E1;	
+	--primary-text-color-rgb: #{toRGB(#CAD4E1)};
+
+	// btn color
+	--primary-color: #2E4DFE;
+	--primary-color-rgb: #{toRGB(#2E4DFE)};
+	--secondary-color: #6495ED;
+	--secondary-color-rgb: #{toRGB(#6495ED)};
+
+	// icon color
+	--icon-color: #C0C0C0;
+	--icon-color-rgb: #{toRGB(#C0C0C0)};
+
+	// background color
+	--bg-color: #E2E7FF;
+	--bg-color-rgb: #{toRGB(#E2E7FF)};
+	--bg-color2: #202932;
+	--bg-color2-rgb: #{toRGB(#202932)};
+	--bg-color3: #F2F4FB;
+	--bg-color3-rgb: #{toRGB(#F2F4FB)};
+	--bg-color-green: #32A552;
+	--bg-color-green-rgb: #{toRGB(#32A552)};
+	--bg-color-purple: #A22EFE;
+	--bg-color-purple-rgb: #{toRGB(#A22EFE)};
+	--bg-color-red: #FE2E2E;
+	--bg-color-red-rgb: #{toRGB(#FE2E2E)};
+
+	body {
+		background-color: var(--body-color)
+	}
+	.topbar-two__theme-text.light-text {
+		font-size: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
+	.topbar-two__theme-text.dark-text {
+		font-size: 18px;
+		opacity: 1;
+		visibility: visible;
+	}
+	.section-header--five {
+		&.one-page-scroll-header,
+		&.header-sticky-cloned {
+			&.sticky-active {
+				background-color: rgba(var(--primary-text-color-rgb),0.9) !important;
+			}
+			.section-header__main-menu > ul > li {
+				color: var(--body-color);
+			}
+		}
+	}
+
+	.sec-title__tagline { background-color: var(--bg-color2); }
+	
+	.dark-svg-hover:hover > svg,
+	.section-client-rating__btn > svg {
+		filter: brightness(5) invert(1);
+	}
+	.section-price-table__col.active .section-price-table__btn,
+	.section-price-table__col:hover .section-price-table__btn {
+		color: var(--primary-text-color);
+	}
+	.section-price-table {
+		.slide {
+			background-color: var(--bg-color);
+		}
+	}
+	.section-services__fItem {
+		background-color: var(--bg-color2);
+	}
+	.section-services__listitem {
+		&.click-advertising {
+			background-color: var(--bg-color2);
+		}
+	}
+	.section-rating__slider-text { color: var(--body-text-color);}
+	.blog-one--three .blog-one__meta li,
+	.blog-one--three .blog-one__meta li a,
+	.blog-one--three .blog-one__title { 
+		color: var(--primary-text-color);
+		a {
+			&:hover {
+				color: var(--primary-text-color);
+			}
+		}
+	}
+	.blog-one--single .post-arrow-icon {
+		background-color: var(--bg-color);
+	}
+	.section-header__main-menu > ul > li > ul > li.dropdown-arrow > a::before,
+	.section-job-details__description__benefites-list li img {
+		filter: brightness(0) invert(1);
+	}
+
+	.section-provide__right__bg {
+		opacity: 0.1;
+	}
+	.section-provide__right__flogo {
+		background-color: var(--bg-color2);
+	}
+	.section-approach {
+		.tab-item.tab-active  {
+			.section-approach__facilities__title {
+				color: var(--primary-text-color);
+			}
+		}
+		.section-approach__facilities__title {
+			&:hover {
+				color: var(--primary-text-color);
+			}
+		}
+	}
+	.dark-btn {
+		color: var(--primary-text-color);
+		&:hover {
+			color: var(--primary-text-color);
+			& > svg {
+				filter: brightness(0) invert(1);
+			}
+		}
+		& > svg {
+			filter: brightness(0) invert(1);
+		}
+	}
+}
+
+$rank-flow-font:var(--nextpro-font, 'Plus Jakarta Sans', sans-serif);
+$rank-flow-font2:var(--nextpro-font2, 'Inter', sans-serif);
+$rank-flow-heading-font:var(--nextpro-heading-font, 'Plus Jakarta Sans', sans-serif);
+$rank-flow-special-font:var(--nextpro-special-font, 'DM Sans', sans-serif);
+
+$body-color:var(--body-color, #fff);
+$body-color-rgb:var(--body-color-rgb, #{toRGB(#fff)});
+$body-text-color:var(--body-text-color, #5C6671);
+$body-text-color-rgb:var(--body-text-color-rgb, #{toRGB(#5C6671)});
+$primary-text-color:var(--primary-text-color, #001F3F);
+$primary-text-color-rgb:var(--primary-text-color-rgb, #{toRGB(#001F3F)});
+
+// btn color
+$primary-color:var(--primary-color, #2E4DFE);
+$primary-color-rgb:var(--primary-color-rgb, #{toRGB(#2E4DFE)});
+$secondary-color:var(--secondary-color, #6495ED);
+$secondary-color-rgb:var(--secondary-color-rgb, #{toRGB(#6495ED)});
+
+// icon color
+$icon-color:var(--icon-color, #C0C0C0);
+$icon-color-rgb:var(--icon-color-rgb, #{toRGB(#C0C0C0)});
+$star-color:var(--star-color, #F4C82A);
+$star-color-rgb:var(--star-color-rgb, #{toRGB(#F4C82A)});
+$star-color2:var(--star-color2, #FEA500);
+$star-color2-rgb:var(--star-color2-rgb, #{toRGB(#FEA500)});
+
+// background color
+$bg-color:var(--bg-color, #001F3F);
+$bg-color-rgb:var(--bg-color-rgb, #{toRGB(#001F3F)});
+$bg-color2:var(--bg-color2, #E2E7FF);
+$bg-color2-rgb:var(--bg-color2-rgb, #{toRGB(#E2E7FF)});
+$bg-color3:var(--bg-color3, #F2F4FB);
+$bg-color3-rgb:var(--bg-color3-rgb, #{toRGB(#F2F4FB)});
+$bg-color-green: var(--bg-color-green, #32A552);
+$bg-color-green-rgb: var(--bg-color-green-rgb, #{toRGB(#32A552)});
+$bg-color-purple: var(--bg-color-purple, #A22EFE);
+$bg-color-purple-rgb: var(--bg-color-purple-rgb, #{toRGB(#A22EFE)});
+$bg-color-red: var(--bg-color-red, #FE2E2E);
+$bg-color-red-rgb:var(--bg-color-red-rgb, #{toRGB(#FE2E2E)});

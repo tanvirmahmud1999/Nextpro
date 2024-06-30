@@ -1,0 +1,18 @@
+html { direction: rtl; }
+.inner-page-hero__breadcrumb li i { transform: scaleX(-1); }
+.section-price-table .slide {
+    right: initial;
+    left: calc(calc(100% - 150px));
+}
+.next-marketing-btn > svg { transform: scaleX(-1) rotate(-45deg); }
+.next-marketing-btn:hover > svg { transform: scaleX(-1); }
+
+/* about section */
+.newsletter-one--two .newsletter-one__business-arrow {
+    transform: scaleX(-1);
+    justify-content: flex-start;
+}
+
+/* owl-carousel */
+.owl-carousel .owl-nav button.owl-prev { transform: scaleX(-1); }
+.owl-carousel .owl-nav button.owl-next { transform: scaleX(-1); }

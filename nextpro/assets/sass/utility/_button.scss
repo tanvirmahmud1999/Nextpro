@@ -1,0 +1,31 @@
+@mixin nextmarketingBtn($bgColor: #2E4DFE, $color: #fff, $padding: 12px 39px) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  
+  width: fit-content;
+  background-color: $primary-color;
+  color: $body-color;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+  height: 50px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  padding: $padding;
+  border: 2px solid transparent;
+  &:hover {
+    color: $color;
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+  }
+  @media (max-width:991px) {
+    font-size: 16px;
+    line-height: 1;
+    padding: 12px 31px;
+    height: 46px;
+  }
+}

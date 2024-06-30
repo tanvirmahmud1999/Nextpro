@@ -1,0 +1,70 @@
+/* ===================================
+        funfact css
+====================================== */
+.section-funfact {
+    padding: 60px 0;
+    @media (max-width:991px) { padding: 35px 0; }
+    .container { max-width: 1350px; }
+    &__list {
+        @media (max-width:1280px) { gap: 25px 0; }
+    }
+    &__item {
+        width: auto;
+        @media (max-width:1280px) { width: 50%; }
+        @media (max-width:767px) { width: 100%; }
+    }
+    &__item+&__item {
+        padding-left: 12px;
+        @media (max-width:1280px) { padding-left: 0; }
+    }
+    &__content {
+        max-width: 290px;
+        @media (max-width:1280px) { max-width: 100%; }
+    }
+    &__count {
+        font-size: 62px;
+        font-weight: 800;
+        line-height: 78px;
+        color: $primary-text-color;
+        @media (max-width:991px) {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 68px;
+        }
+        &--two { color: $body-color; }
+    }
+    &__counter-text {
+        font-size: 62px;
+        font-weight: 800;
+        line-height: 78px;
+        letter-spacing: -0.05em;;
+        color: $primary-text-color;
+        @media (max-width:991px) {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 68px;
+        }
+        &--two { color: $body-color; }
+    }
+    &__text {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 29px;
+        color: $primary-text-color;
+        margin-bottom: 0;
+        padding-left: 14px;
+        @media (max-width:991px) {
+            font-size: 17px;
+            line-height: 26px;
+        }
+        &--two { color: $body-color; }
+    }
+}
+// funfact-services-details
+.funfact-services-details-bg {
+    background-color: $primary-color;
+    border-radius: 30px;
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 110px 165px;
+}

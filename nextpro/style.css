@@ -1,0 +1,73 @@
+/*
+Theme Name: NextPro - SEO SMM & Digital Marketing Agency Wordpress Theme
+Theme URI: https://themeperch.net/nextpro
+Author: Themeperch
+Author URI: http://themeforest.net/user/themeperch
+Description: NextPro is a SEO SMM & Digital Marketing Agency Wordpress. This template is a pre-designed structure or layout coded in Wordpress that is specifically tailored for creating web pages related to events such as General Marketing, Social Media Marketing, AI in Marketing, Paid Advertising, Video Marketing, Analytics and Reporting, Industry News & Trends and more available to others feature. These templates provide a foundation for web developers and designers to easily create any type of marketing-related website with a visually appealing and functional design. Below is an itemized description of what you might typically find in a marketing-related Wordpress template.
+Version: 1.0.0
+Requires at least: 5.0
+Tested up to: 6.2
+Requires PHP: 5.6
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, two-columns, three-columns, right-sidebar, flexible-header, custom-colors,  custom-background, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: nextpro
+*/
+
+.header-wrapper { margin-top: var(--wp-admin--admin-bar--height); }
+.btn svg{ fill: none; }
+.section-header.header-sticky-cloned.sticky-active {  margin-top: var(--wp-admin--admin-bar--height); }
+.section-price .sec-title__title { margin-bottom: 25px !important; }
+.scroll-to-top svg{ fill: none; }
+
+.section-price-table__content-inner { z-index: 1; }
+.section-price-table__content-inner.content-active { z-index: 2; }
+.section-price-table__tabs-row--three{ max-width: fit-content;}
+.experience-card__year {white-space: nowrap;}
+
+.section-funfact__list { padding-top: 120px;}
+
+.blog-one__title{ display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; max-width: auto; }
+.blog-one__innerimg img{min-height: 285px;}
+a#cancel-comment-reply-link{color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+img.flip-image{ -webkit-transform: scaleX(-1); transform: scaleX(-1);}
+/* .wp-block-cover,  */
+/* .wp-block-cover-image {  display: flex !important;  margin-bottom: 15px; } */
+.wp-block-button { margin: 10px 0; }
+.wp-block-cover.has-background-dim.alignleft { float: left; margin-right: 15px;}
+/* 
+.blog-one__comment-form .form-control {
+  background-color: rgba(var(--primary-color-rgb, 46, 77, 254), 0.05);
+  padding-left: 30px;
+  color: var(--body-text-color, #5C6671);
+} */
+.sidebar__nav li a {  width: 100%; }
+.wp-block-quote{  position: relative;}
+
+/* .section-job-details__salary .salary-range { font-size: 36px; line-height: 50px; color: var(--primary-text-color, #001F3F);}
+.section-job-details__salary .salary-currency { font-size: 22px; line-height: 35px; }
+.section-header--five .section-header__dskmenu--two .section-header__dskmenu__bar { background-color: var(--body-color, #fff); }
+.offcanvas-left.section-header__dskmenu.section-header__dskmenu--two { align-items: start; margin-right: 30px !important;  margin-left: 0 !important; }
+.navbar-dark .section-header__main-menu li { color: var(--body-text-color, #5C6671) !important; }
+.section-header--five.navbar-dark .section-header__dskmenu--two .section-header__dskmenu__bar { background-color: var(--body-text-color, #5C6671); }
+.sec-title__title > span { z-index: 1;} 
+.section-dashboard__playbtn img { width: 132px !important;  min-height: initial !important; min-height: initial !important; } */

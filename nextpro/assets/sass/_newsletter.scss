@@ -1,0 +1,211 @@
+/* ===================================
+        newsletter css
+====================================== */
+.newsletter-one {
+    overflow: hidden;
+    padding: 60px 0;
+    @media (max-width:991px) { padding: 35px 0; }
+    .container { max-width: 1350px; }
+    &__wrap {
+        position: relative;
+        overflow: hidden;
+    }
+    &__bgimg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+    &__bg {
+        background-color: $primary-color;
+        border-radius: 30px;
+        padding: 55px 50px 65px 50px;
+        @media (max-width:991px) {
+            flex-wrap: wrap;
+            padding: 30px;
+        }
+    }
+    &__title {
+        font-size: $heading-size2;
+        line-height: 67px;
+        margin-bottom: 0;
+        color: $body-color;
+        position: relative;
+        z-index: 2;
+        @media (max-width:991px) {
+            font-size: 40px;
+            line-height: 50px;
+            padding-bottom: 24px;
+        }
+        @media (max-width:600px) {
+            font-size: 30px;
+            line-height: 41px;
+        }
+    }
+    &__form {
+        position: relative;
+        z-index: 2;
+        width: 48.9%;
+        @media (max-width:991px) { width: 100%; }
+        .form-group {
+            position: relative;
+            width: 100%;
+        }
+    }
+    input[type=email] {
+        display: block;
+        width: 100%;
+        height: 70px;
+        font-size: 18px;
+        line-height: 1;
+        font-weight: 500;
+        font-family: var(--nextpro-font, "Plus Jakarta Sans", sans-serif);
+        outline: none;
+        padding-left: 45px;
+        padding-right: 20px;
+        border: 3px solid $bg-color2;
+        border-radius: 54px;
+        color: $primary-color;
+        background-color: $body-color;
+        position: relative;
+        z-index: 2;
+        &:is(:focus, :active) { box-shadow: none; }
+        &:is(:focus, :active) + .newsletter-one__field-bd-effect::before,
+        &:is(:focus, :active) + .newsletter-one__field-bd-effect::after {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    input::-webkit-input-placeholder { color: $primary-color; }
+    input::-moz-placeholder { color: $primary-color; }
+    input::placeholder { color: $primary-color; }
+    &__field-bd-effect {
+        position: absolute;
+        width: calc(100% + 0px);
+        height: calc(100% + 0px);
+        top:0;
+        left:0;
+        z-index: 1;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: all 0.4s;
+            border-radius: 54px;
+        }
+        &::before {
+            max-width: 0;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            border-top: 3px solid rgba($primary-text-color-rgb, 0.6);
+            border-bottom: 3px solid rgba($primary-text-color-rgb, 0.6);
+        }
+        &::after {
+            max-height: 0;
+            margin: auto 0;
+            top: 0;
+            bottom: 0;
+            border-left: 3px solid rgba($primary-text-color-rgb, 0.6);
+            border-right: 3px solid rgba($primary-text-color-rgb, 0.6);
+        }
+    }
+    &__newsletter-btn {
+        position: absolute;
+        width: fit-content;
+        right: 3px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        height: 64px;
+        z-index: 3;
+        @media (max-width:480px) {
+            width: 64px;
+            height: 64px;
+            background-image: url('../images/shapes/send-arrow.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 24px auto;
+            & > span { text-indent: -999999px; }
+        }
+        & > svg {
+            margin-left: 10px;
+            transform: rotate(-45deg);
+            position: relative;
+            filter: brightness(0) invert(1);
+            transition: all 0.3s;
+            @media (max-width:480px) {
+                padding: 0;
+                top: 0;
+            }
+        }
+        &:hover {
+            @media (max-width:480px) { background-image: url('../images/shapes/send-arrow-hover.png'); }
+            & > svg {
+                filter: initial;
+                transform: rotate(0);
+            }
+        }
+    }
+
+    &--two {
+        .newsletter-one__bg {
+            background-color: rgba($primary-color-rgb, 0.05);
+            padding: 64px 50px;
+            gap: 0 13px;
+            @media (max-width:991px) {
+                padding: 40px 30px;
+                gap: 18px 0;
+            }
+        }
+        .newsletter-one__mx {
+            max-width: 700px;
+            position: relative;
+        }
+        .newsletter-one__business-arrow {
+            position: absolute;
+            width:100%;
+            height: auto;
+            right: -155px;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            z-index: -1;
+            @media (max-width:1200px) { right: -70px; }
+            & > img {
+                max-width: 188px;
+                width: 100% !important;
+            }
+        }
+        .newsletter-one__title { color: $primary-text-color; }
+        .newsletter-one__text {
+            font-size: 18px;
+            line-height: 29px;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+        .newsletter-one__btn {
+            min-width: 252px;
+            @media (max-width:1200px) {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        }
+    }
+}
+
+[data-bs-theme="dark"] {
+    .newsletter-one__business-arrow {
+        img { filter: brightness(1) invert(1); }
+    }
+}

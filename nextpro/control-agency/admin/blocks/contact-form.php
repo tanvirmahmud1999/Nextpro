@@ -1,0 +1,105 @@
+<?php
+return [
+    'title'      => esc_html__('Contact Form Element', 'nextpro'),
+    'id'         => 'contact-form-block',
+    'icon'       => 'email-alt',
+    'description' => esc_html__('Contact Form Block', 'nextpro'),
+    'fields'     => [
+        [
+            'type' => 'heading',
+            'name' => esc_attr__('Contact Form Element', 'nextpro'),
+        ],
+        [
+            'type'  => 'hidden',
+            'id'    => 'template',
+            'name'    => 'Template',
+            'std'   => 'components/contact-form.php',
+        ],
+        [
+            'name'  => esc_attr__('Transparent background Switcher', 'nextpro'),
+            'id'    => 'bg_switcher',
+            'type'  => 'switch',
+            'style' => 'square',
+            'std'   => true,
+            'desc'  => esc_attr__('If you do not like background color disable the switch.', 'nextpro'),
+        ],
+        [
+            'name'            => esc_attr__('Select Image or icon',  'nextpro'),
+            'id'              => 'icon_style',
+            'type'            => 'select',
+            'multiple'        => false,
+            'select_all_none' => false,
+            'options'         => [
+                'image_icon'  => esc_attr__('Image Icon', 'nextpro'),
+                'icon'   => esc_attr__('Icon', 'nextpro'),
+            ],
+            'std'              => 'image_icon',
+        ],
+        [
+            'id'               => 'image_icon',
+            'name'             => esc_attr__('Image icon',  'nextpro'),
+            'type'               => 'file_input',
+            'desc'             => esc_attr__('Add service\'s image icon', 'nextpro'),
+            'visible'          => ['icon_style', '=', 'image_icon'],
+            'std'              =>  get_theme_file_uri('assets/images/shapes/cro-icon.png'),
+        ],
+        [
+            'id'               => 'icon',
+            'name'             => esc_attr__('Name of Icon',  'nextpro'),
+            'type'             => 'select',
+            'desc'             => esc_attr__('Add  icon', 'nextpro'),
+            'options'          =>  Nextpro\SVG_Icons::options(),
+            'std'              => 'message-icon-two',
+            'visible'          => ['icon_style', '=', 'icon'],
+
+        ],
+        [
+            'id'   => 'title',
+            'name' => esc_attr__('Title', 'nextpro'),
+            'type' => 'text',
+            'std'  => 'Request a free Audit of your website',
+        ],
+        [
+            'id'   => 'desc',
+            'name' => esc_attr__('Description', 'nextpro'),
+            'type' => 'textarea',
+            'std'  => 'Find quick answers to common queries in our FAQ section, ensuring a clear understanding of your digital journey with us.',
+        ],
+        [
+            'name'            => esc_attr__('Select Form Style',  'nextpro'),
+            'id'              => 'form_style',
+            'type'            => 'select',
+            'multiple'        => false,
+            'select_all_none' => false,
+            'options'         => [
+                'form_id'   => esc_attr__('Contact form 7', 'nextpro'),
+                'shortcode'  => esc_attr__('Shortcode', 'nextpro'),
+            ],
+            'std'              => 'form_id',
+        ],
+        [
+            'name'        => esc_attr__('Contact form 7', 'nextpro'),
+            'id'          => 'form_id',
+            'type'        => 'select',
+            'options'     => nextpro_wpcf7_contact_form_options(),
+            'visible'          => ['form_style', '=', 'form_id'],
+        ],
+        [
+            'id'   => 'shortcode',
+            'name' => esc_attr__('Shortcode', 'nextpro'),
+            'type' => 'textarea',
+            'std'  => '',
+            'placeholder'  => 'Enter shortcode here...',
+            'visible'          => ['form_style', '=', 'shortcode'],
+        ],
+        [
+            'id'               => 'background_image',
+            'name'             => esc_attr__('Background Image', 'nextpro'),
+            'type'             => 'single_image',
+            'force_delete'     => false,
+            'max_file_uploads' => 1,
+            'image_size'       => 'full',
+            'visible'          => ['template_file', 'in', ['components/call-to-action-style2.php', 'service/single/cta.php']]
+        ],
+    ],
+];

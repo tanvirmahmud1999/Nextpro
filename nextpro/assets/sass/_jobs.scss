@@ -1,0 +1,191 @@
+/* ===================================
+        job-circular css
+====================================== */
+.section-job-circular {
+    padding: 60px 0;
+    @media (max-width:991px) { padding: 35px 0; }
+    .container { max-width: 1350px; }
+    .sec-title {
+        margin-bottom: 70px;
+        @media (max-width:991px) { margin-bottom: 30px; }
+    }
+    &__item-row {
+        background-color: rgba($primary-color-rgb, 0.05);
+        border: 1px solid $bg-color2;
+        border-radius: 30px;
+        padding: 40px;
+        transition: all 0.5s ease;
+        gap: 10px;
+        @media (max-width:1200px) {
+            border-radius: 20px;
+            padding: 20px;
+        }
+        @media (max-width:991px) {
+            border-radius: 16px;
+            padding: 16px;
+        }
+        &:hover {
+            -webkit-box-shadow: 0px 0px 20px 0px rgba($bg-color-rgb, 0.1); 
+            box-shadow: 0px 0px 20px 0px rgba($bg-color-rgb, 0.1);
+        }
+    }
+    &__item-row + &__item-row {
+        margin-top: 50px;
+        @media (max-width:1200px) { margin-top: 30px; }
+    }
+    &__item-col {
+        width: calc(calc(100% - 268px) / 3);
+        @media (max-width:991px) { width: calc(calc(100% - 10px) / 2); }
+        @media (max-width:767px) { width: calc(calc(100% - 0px) / 1); }
+        &.view-circular {
+            width: 238px;
+            min-width: 238px;
+        }
+    }
+    &__icon {
+        width: 60px;
+        height: 60px;
+        background-color: $body-color;
+        border: 2px solid $bg-color2;
+        border-radius: 8px;
+        svg { fill: transparent; }
+    }
+    &__content {
+        width: calc(calc(100% - 60px) / 1);
+        padding-left: 25px;
+        @media (max-width:1200px) { padding-left: 12px; }
+    }
+    .next-marketing-btn {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+}
+
+// section-job-details
+.section-job-details {
+    padding: 60px 0;
+    @media (max-width:991px) { padding: 34px 0; }
+    .container { max-width: 1680px; }
+    &__circularbg {
+        background-color: rgba($primary-color-rgb, 0.05);
+        border-radius: 0px 0px 30px 30px;
+        padding: 95px 30px;
+        margin-bottom: 61px;
+        @media (max-width:991px) {
+            padding: 60px 30px;
+            margin-bottom: 38px;
+        }
+        @media (max-width:767px) { padding: 50px 16px; }
+    }
+    &__circular-max {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+    &__titlewrap {
+        margin-bottom: 34px;
+        @media (max-width:991px) { margin-bottom: 26px; }
+    }
+    &__salary {
+        li {
+            &.salary-range {
+                font-size: $heading-size3;
+                line-height: 50px;
+                color: $primary-text-color;
+                @media (max-width:991px) {
+                    font-size: 28px;
+                    line-height: 34px;
+                }
+            }
+            &.salary-currency {
+                font-size: 22px;
+                line-height: 35px;
+                @media (max-width:991px) {
+                    font-size: 18px;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+    &__circular {
+        width: calc(calc(100% - 194px) / 1);
+        gap: 12px;
+        padding-right: 15px;
+        @media (max-width:767px) { width: calc(calc(100% - 0px) / 1); }
+    }
+    &__circularcol {
+        width: calc(calc(100% - 24px) / 3);
+        @media (max-width:991px) { width: calc(calc(100% - 12px) / 2); }
+        @media (max-width:767px) { width: calc(calc(100% - 0px) / 2); }
+    }
+    .next-marketing-btn {
+        min-width: 194px;
+        padding-left: 48px;
+        padding-right: 48px;
+        @media (max-width:767px) {
+            min-width: initial;
+            padding-left: 40px;
+            padding-right: 40px;
+            margin-top: 15px;
+        }
+    }
+
+    &__description {
+        &__content {
+            padding-right: 16px;
+            @media (max-width:991px) {
+                padding-right: 0;
+                padding-bottom: 38px;
+            }
+        }
+        &__item {
+            margin-bottom: 50px;
+            &:last-child { margin-bottom: 0; }
+            @media (max-width:991px) { margin-bottom: 32px; }
+        }
+        &__headding {
+            margin-bottom: 30px;
+            @media (max-width:991px) { margin-bottom: 20px; }
+        }
+        &__list {
+            li {
+                position: relative;
+                padding-left: 16px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 4px;
+                    height: 4px;
+                    top: 11.5px;
+                    left: 0;
+                    border-radius: 50px;
+                    background-color: $body-text-color;
+                }
+            }
+        }
+        &__benefites {
+            background-color: rgba($primary-color-rgb, 0.05);
+            border-radius: 30px;
+            transition: all 0.5s ease;
+            padding: 43px 18px 43px 25px;
+        }
+        &__benefites-list {
+            li {
+                position: relative;
+                font-size: 16px;
+                line-height: 22px;
+                display: flex;
+                align-items: flex-start;
+                img {
+                    position: relative;
+                    top: 4px;
+                    width: 18px !important;
+                }
+                span {
+                    display: block;
+                    padding-left: 12px;
+                }
+                & + li { margin-top: 15px; }
+            }
+        }
+    }
+}
